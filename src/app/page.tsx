@@ -137,19 +137,23 @@ export default function Home() {
                 Spanning three generations of trial advocates and judicial bench members, Shahier Singh & Associates has earned a commanding reputation for championing high-stakes legal disputes and complex litigation. We approach every matter with judicial rigor, strategic precision, and relentless client dedication.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 w-full text-left">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
-                  <div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 w-full">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#160E0A] border border-[#3D291D] hover:border-[#D4AF37]/40 transition-colors">
+                  <div className="h-8 w-8 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37] mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-[#D4AF37]" />
+                  </div>
+                  <div className="text-left">
                     <h5 className="text-xs font-bold text-white">Uncompromising Confidentiality</h5>
-                    <p className="text-[11px] text-[#8C7C6D]">Discreet, strategic defense tailored for high-profile leaders, families, and organizations.</p>
+                    <p className="text-[11px] text-[#A39382] leading-normal mt-0.5">Discreet, strategic defense tailored for high-profile leaders, families, and organizations.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
-                  <div>
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#160E0A] border border-[#3D291D] hover:border-[#D4AF37]/40 transition-colors">
+                  <div className="h-8 w-8 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37] mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-[#D4AF37]" />
+                  </div>
+                  <div className="text-left">
                     <h5 className="text-xs font-bold text-white">Multi-Jurisdictional Trial Reach</h5>
-                    <p className="text-[11px] text-[#8C7C6D]">Advocating for clients across High Courts, District Courts, Supreme Court, and international tribunals.</p>
+                    <p className="text-[11px] text-[#A39382] leading-normal mt-0.5">Advocating for clients across High Courts, District Courts, Supreme Court, and international tribunals.</p>
                   </div>
                 </div>
               </div>
@@ -192,18 +196,30 @@ export default function Home() {
                 Framed within our lead chamber walls rests a rich collage of historic newspaper reports documenting landmark criminal acquittals, high-profile civil trials, and judicial bench milestones—featuring our advocate team portraits across 1969, 2004, and the present era.
               </p>
 
-              <div className="space-y-3 pt-2 w-full text-left">
-                <div className="flex items-center gap-3 p-3 rounded-xl bg-[#160E0A] border border-[#3D291D]">
-                  <Newspaper className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
-                  <span className="text-xs text-[#E2D5C7] font-medium">Front-page trial coverage across national & regional daily newspapers</span>
+              <div className="space-y-3 pt-2 w-full">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#160E0A] border border-[#3D291D] hover:border-[#D4AF37]/40 transition-colors">
+                  <div className="h-8 w-8 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37] mt-0.5">
+                    <Newspaper className="w-4 h-4 text-[#D4AF37]" />
+                  </div>
+                  <span className="text-xs text-[#E2D5C7] font-medium text-left leading-relaxed">
+                    Front-page trial coverage across national & regional daily newspapers
+                  </span>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-xl bg-[#160E0A] border border-[#3D291D]">
-                  <Award className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
-                  <span className="text-xs text-[#E2D5C7] font-medium">Historic advocate group portraits from 1969, 2004, and 2022 team sessions</span>
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#160E0A] border border-[#3D291D] hover:border-[#D4AF37]/40 transition-colors">
+                  <div className="h-8 w-8 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37] mt-0.5">
+                    <Award className="w-4 h-4 text-[#D4AF37]" />
+                  </div>
+                  <span className="text-xs text-[#E2D5C7] font-medium text-left leading-relaxed">
+                    Historic advocate group portraits from 1969, 2004, and 2022 team sessions
+                  </span>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-xl bg-[#160E0A] border border-[#3D291D]">
-                  <FileText className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
-                  <span className="text-xs text-[#E2D5C7] font-medium">Unbroken legacy of trial defense in High Courts & Supreme Court</span>
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#160E0A] border border-[#3D291D] hover:border-[#D4AF37]/40 transition-colors">
+                  <div className="h-8 w-8 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37] mt-0.5">
+                    <FileText className="w-4 h-4 text-[#D4AF37]" />
+                  </div>
+                  <span className="text-xs text-[#E2D5C7] font-medium text-left leading-relaxed">
+                    Unbroken legacy of trial defense in High Courts & Supreme Court
+                  </span>
                 </div>
               </div>
 
@@ -220,9 +236,9 @@ export default function Home() {
             {/* Right Column: Framed Archival Collage Image */}
             <div className="lg:col-span-7">
               <div className="relative rounded-2xl overflow-hidden border border-[#523A2A] bg-[#120B07] shadow-2xl group">
-                <div className="relative w-full h-[380px] sm:h-[480px] rounded-t-2xl overflow-hidden bg-[#0D0805]">
+                <div className="relative w-full h-[360px] sm:h-[460px] rounded-t-2xl overflow-hidden bg-[#0D0805]">
                   <Image
-                    src="/images/press_archives.jpg"
+                    src="/images/news.jpeg"
                     alt="Shahier Singh & Associates Historical Press Archives & Advocate Group Portraits Collage"
                     fill
                     unoptimized
@@ -230,10 +246,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-4 text-center bg-[#1A110B] border-t border-[#3D291D] space-y-1">
-                  <h4 className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
+                  <h4 className="font-cinzel text-xs sm:text-sm font-bold text-[#D4AF37] uppercase tracking-wider">
                     CHAMBERS ARCHIVAL PRESS WALL & ADVOCATE PORTRAITS (1969 - 2022)
                   </h4>
-                  <p className="text-[11px] text-[#A39382]">
+                  <p className="text-[11px] sm:text-xs text-[#A39382]">
                     Decades of landmark trial news clippings alongside 3 generations of advocate team portraits.
                   </p>
                 </div>
