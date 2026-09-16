@@ -219,17 +219,17 @@ export default function Home() {
 
             {/* Right Column: Framed Archival Collage Image */}
             <div className="lg:col-span-7">
-              <div className="relative rounded-2xl overflow-hidden border-4 border-[#6E4D38] p-2 bg-[#1C120B] shadow-2xl wood-badge group">
-                <div className="relative w-full h-[380px] sm:h-[480px] rounded-xl overflow-hidden bg-black">
+              <div className="relative rounded-2xl overflow-hidden border border-[#523A2A] bg-[#120B07] shadow-2xl group">
+                <div className="relative w-full h-[380px] sm:h-[480px] rounded-t-2xl overflow-hidden bg-[#0D0805]">
                   <Image
                     src="/images/press_archives.jpg"
                     alt="Shahier Singh & Associates Historical Press Archives & Advocate Group Portraits Collage"
                     fill
                     unoptimized
-                    className="object-contain group-hover:scale-105 transition-transform duration-700"
+                    className="object-contain p-2 group-hover:scale-[1.02] transition-transform duration-500"
                   />
                 </div>
-                <div className="p-4 text-center bg-gradient-to-t from-[#140D08] to-[#1C120B] border-t border-[#4A3425] rounded-b-xl space-y-1">
+                <div className="p-4 text-center bg-[#1A110B] border-t border-[#3D291D] space-y-1">
                   <h4 className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
                     CHAMBERS ARCHIVAL PRESS WALL & ADVOCATE PORTRAITS (1969 - 2022)
                   </h4>
