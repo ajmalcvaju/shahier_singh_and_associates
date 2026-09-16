@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #0D0805;
+  --foreground: #F5EBE1;
+  --gold-accent: #D4AF37;
+  --gold-hover: #E5C158;
+  --wood-dark: #19100A;
+  --wood-card: #20150F;
+  --wood-border: #3D291D;
+  --text-muted: #A39382;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Custom Wood Texture & Metallic Buttons */
+.wood-btn-primary {
+  background: linear-gradient(180deg, #4A3324 0%, #2A1B11 100%);
+  border: 1px solid #6E4D38;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 14px rgba(0, 0, 0, 0.4);
+  color: #F8F1E9;
+  transition: all 0.25s ease;
+}
+
+.wood-btn-primary:hover {
+  background: linear-gradient(180deg, #5B402E 0%, #362317 100%);
+  border-color: #D4AF37;
+  color: #FFF;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 6px 20px rgba(212, 175, 55, 0.25);
+}
+
+.wood-btn-secondary {
+  background: linear-gradient(180deg, #2D1E14 0%, #1A1009 100%);
+  border: 1px solid #483223;
+  color: #E2D4C5;
+  transition: all 0.25s ease;
+}
+
+.wood-btn-secondary:hover {
+  background: linear-gradient(180deg, #3A281B 0%, #23160D 100%);
+  border-color: #A37E36;
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.wood-badge {
+  background: linear-gradient(180deg, rgba(42, 27, 17, 0.85) 0%, rgba(20, 12, 7, 0.95) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255, 215, 0, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF6E5 0%, #D4AF37 50%, #AA8222 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0E0907;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A271B;
+  border-radius: 4px;
+}
+/* Universal Cursor Pointer for Buttons and Interactive Controls */
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.wood-btn-primary,
+.wood-btn-secondary,
+select {
+  cursor: pointer !important;
+}
+
+button:hover,
+a:hover,
+[role="button"]:hover,
+.wood-btn-primary:hover,
+.wood-btn-secondary:hover,
+select:hover {
+  cursor: pointer !important;
+}
+
