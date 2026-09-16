@@ -112,37 +112,37 @@ export default function HeroSection() {
 
             {/* Credentials / Stat Bar */}
             <div className="pt-4">
-              <div className="wood-badge rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-3 gap-4 border border-[#523A2A]/60">
+              <div className="wood-badge rounded-2xl p-3 sm:p-4 grid grid-cols-3 gap-2 sm:gap-4 border border-[#523A2A]/60">
                 {/* Stat 1 */}
-                <div className="flex items-center gap-3 border-b sm:border-b-0 sm:border-r border-[#3D291D] pb-3 sm:pb-0 pr-2">
-                  <div className="h-9 w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#1A100A] sm:bg-transparent border sm:border-0 border-[#3D291D] text-center sm:text-left sm:border-r sm:border-[#3D291D] sm:pr-2">
+                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                     <History className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-white block leading-tight">70+ Years Lineage</span>
-                    <span className="text-[11px] text-[#A39382] block">Judicial & Advocacy Practice</span>
+                    <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">70+ Years</span>
+                    <span className="text-[9px] sm:text-[11px] text-[#A39382] block mt-0.5">Judicial Practice</span>
                   </div>
                 </div>
 
                 {/* Stat 2 */}
-                <div className="flex items-center gap-3 border-b sm:border-b-0 sm:border-r border-[#3D291D] pb-3 sm:pb-0 pr-2">
-                  <div className="h-9 w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#1A100A] sm:bg-transparent border sm:border-0 border-[#3D291D] text-center sm:text-left sm:border-r sm:border-[#3D291D] sm:pr-2">
+                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                     <Gavel className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-white block leading-tight">1,000+ Disputes</span>
-                    <span className="text-[11px] text-[#A39382] block">Successfully Advocated</span>
+                    <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">1,000+ Disputes</span>
+                    <span className="text-[9px] sm:text-[11px] text-[#A39382] block mt-0.5">Advocated</span>
                   </div>
                 </div>
 
                 {/* Stat 3 */}
-                <div className="flex items-center gap-3">
-                  <div className="h-9 w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#1A100A] sm:bg-transparent border sm:border-0 border-[#3D291D] text-center sm:text-left">
+                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                     <Award className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-white block leading-tight">Supreme & High Court</span>
-                    <span className="text-[11px] text-[#A39382] block">Senior Trial Advocates</span>
+                    <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">Supreme & High</span>
+                    <span className="text-[9px] sm:text-[11px] text-[#A39382] block mt-0.5">Court Advocates</span>
                   </div>
                 </div>
               </div>
