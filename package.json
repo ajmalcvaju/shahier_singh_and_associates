@@ -6,7 +6,8 @@
     "dev": "next dev -p 3500",
     "build": "next build",
     "start": "next start -p 3500",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "next build && npx firebase deploy"
   },
   "dependencies": {
     "clsx": "^2.1.1",

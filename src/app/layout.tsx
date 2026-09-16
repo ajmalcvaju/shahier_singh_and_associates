@@ -4,9 +4,31 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Shahier Singh & Associates | Corporate Legal Counsel & Advocates",
-  description: "A legacy of trusted legal counsel to build and protect your business. Premier M&A, high-stakes litigation, IP, tax and corporate legal advisory firm.",
-  keywords: ["Shahier Singh & Associates", "Law Firm", "Corporate Legal Counsel", "Litigation Advocates", "M&A Law Firm", "Delhi Law Firm", "Mumbai Law Firm"],
+  title: {
+    default: "Shahier Singh & Associates | Advocates & Lawyers in Kozhikode, Kerala",
+    template: "%s | Shahier Singh & Associates - Lawyers in Kozhikode",
+  },
+  description: "Leading Advocates & Legal Counsel in Kozhikode (Calicut), Kerala with 70+ years of judicial lineage. Expert representation in High Court practice, criminal trials, civil litigation, corporate law, and RERA disputes.",
+  keywords: [
+    "Advocates in Kozhikode",
+    "Lawyers in Kozhikode",
+    "Lawyers in Calicut",
+    "Best Advocates in Kerala",
+    "Shahier Singh & Associates",
+    "High Court Advocates Kerala",
+    "Criminal Defense Lawyers Kozhikode",
+    "Civil Litigation Advocates Calicut",
+    "Corporate Legal Counsel Kerala",
+    "RERA Lawyers Kozhikode"
+  ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
