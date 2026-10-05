@@ -175,31 +175,31 @@ function ExpertiseContent() {
   return (
     <div className="space-y-0">
       {/* Header */}
-      <section className="py-20 bg-[#120B07] border-b border-[#291B13]">
+      <section className="py-20 bg-[#0B1426]/60 backdrop-blur-md border-b border-[#DFB76C]/25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#D4AF37] px-3.5 py-1.5 rounded-full bg-[#1F140D] border border-[#472E1E]">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
             Practice Mastery
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white">
             Our Expertise & Legal Practice Areas
           </h1>
-          <p className="text-sm text-[#A39382] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
             Full-spectrum legal advocacy across 10 core practice verticals, combining 70+ years of judicial lineage with pragmatic commercial solutions.
           </p>
         </div>
       </section>
 
       {/* Main Practice Interactive Layout */}
-      <section className="py-16 bg-[#0E0906]">
+      <section className="py-16 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             
             {/* Practice Tabs (Left Column) */}
             <div className="lg:col-span-5 space-y-2">
-              <span className="text-xs font-semibold text-[#7A6A5C] uppercase tracking-wider block mb-3 px-2">
+              <span className="text-xs font-bold text-[#DFB76C] uppercase tracking-wider block mb-3 px-2">
                 Select Practice Vertical (10 Core Areas):
               </span>
-              <div className="space-y-2 max-h-[700px] overflow-y-auto pr-1">
+              <div className="space-y-2.5 max-h-[700px] overflow-y-auto pr-1">
                 {practices.map((p, idx) => {
                   const Icon = p.icon;
                   const isSelected = selectedPractice === idx;
@@ -208,19 +208,19 @@ function ExpertiseContent() {
                       key={idx}
                       type="button"
                       onClick={() => handleSelectPractice(idx)}
-                      className={`w-full p-3.5 rounded-xl text-left flex items-center justify-between transition-all border cursor-pointer ${
+                      className={`w-full p-4 rounded-xl text-left flex items-center justify-between transition-all cursor-pointer ${
                         isSelected
-                          ? "bg-[#25170E] border-[#D4AF37] text-white shadow-lg ring-1 ring-[#D4AF37]/40"
-                          : "bg-[#160E09] border-[#3D291D] text-[#A39382] hover:text-white hover:bg-[#1F140D]"
+                          ? "bg-[#0E1B33] border-2 border-[#DFB76C] text-white shadow-xl ring-2 ring-[#DFB76C]/30 scale-[1.01]"
+                          : "luxury-card text-[#CBD5E1] hover:text-white hover:border-[#DFB76C]/60"
                       }`}
                     >
-                      <div className="flex items-center gap-3">
-                        <div className={`p-2 rounded-lg ${isSelected ? "bg-[#3A2416] text-[#D4AF37]" : "bg-[#1E130B] text-[#7A6A5C]"}`}>
+                      <div className="flex items-center gap-3.5">
+                        <div className={`p-2.5 rounded-xl transition-colors ${isSelected ? "bg-gradient-to-br from-[#DFB76C] to-[#A17627] text-[#050811] shadow-md" : "bg-[#0E1F42] text-[#DFB76C] border border-[#DFB76C]/30"}`}>
                           <Icon className="w-4 h-4" />
                         </div>
                         <span className="font-serif text-xs sm:text-sm font-bold leading-tight">{p.title}</span>
                       </div>
-                      <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-transform ${isSelected ? "text-[#D4AF37] translate-x-1" : "text-[#5C4D40]"}`} />
+                      <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-transform ${isSelected ? "text-[#DFB76C] translate-x-1" : "text-[#64748B]"}`} />
                     </button>
                   );
                 })}
@@ -229,24 +229,24 @@ function ExpertiseContent() {
 
             {/* Selected Practice Detail View (Right Column) */}
             <div id="detail-panel" className="lg:col-span-7">
-              <div className="wood-badge rounded-2xl p-8 border border-[#523A2A] space-y-6 sticky top-24">
+              <div className="rounded-2xl p-8 bg-[#0B1426]/90 backdrop-blur-md border border-[#DFB76C]/40 shadow-2xl space-y-6 sticky top-24">
                 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pb-6 border-b border-[#291B13]">
-                  <div className="h-14 w-14 rounded-2xl bg-[#2A1C12] border border-[#6E4D38] flex items-center justify-center text-[#D4AF37] flex-shrink-0">
-                    <CurrentIcon className="w-7 h-7" />
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pb-6 border-b border-[#DFB76C]/20">
+                  <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-[#0E1F42] to-[#0A152C] border border-[#DFB76C]/50 flex items-center justify-center text-[#DFB76C] flex-shrink-0 shadow-inner">
+                    <CurrentIcon className="w-8 h-8" />
                   </div>
                   <div>
                     <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
                       {current.title}
                     </h2>
-                    <p className="text-xs text-[#D4AF37] font-medium mt-1 leading-relaxed">
+                    <p className="text-xs text-[#DFB76C] font-semibold mt-1 leading-relaxed">
                       {current.tagline}
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-serif text-xs font-bold uppercase tracking-wider text-[#A39382]">
+                  <h4 className="font-serif text-xs font-bold uppercase tracking-wider text-[#DFB76C]">
                     Key Capabilities & Advisory Scope
                   </h4>
                   <div className="grid grid-cols-1 gap-3">
@@ -254,15 +254,15 @@ function ExpertiseContent() {
                       const title = typeof item === "string" ? null : item.title;
                       const text = typeof item === "string" ? item : item.text;
                       return (
-                        <div key={i} className="flex items-start gap-3 rounded-xl bg-[#19100A] p-4 border border-[#3D291D]">
-                          <CheckCircle2 className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                        <div key={i} className="flex items-start gap-3 rounded-xl bg-[#060C1A]/80 p-4 border border-[#DFB76C]/20 shadow-sm hover:border-[#DFB76C]/60 transition-colors">
+                          <CheckCircle2 className="w-4 h-4 text-[#DFB76C] flex-shrink-0 mt-0.5" />
                           <div className="space-y-1">
                             {title && (
-                              <h5 className="text-xs font-bold text-[#D4AF37] uppercase tracking-wide">
+                              <h5 className="text-xs font-bold text-[#DFB76C] uppercase tracking-wide">
                                 {title}
                               </h5>
                             )}
-                            <p className="text-xs text-[#E2D5C7] leading-relaxed">{text}</p>
+                            <p className="text-xs text-[#CBD5E1] leading-relaxed">{text}</p>
                           </div>
                         </div>
                       );
@@ -271,11 +271,11 @@ function ExpertiseContent() {
                 </div>
 
                 {/* Mandate Highlight Card */}
-                <div className="rounded-xl bg-gradient-to-r from-[#20150F] to-[#140D08] p-5 border border-[#523A2A]">
-                  <span className="text-[11px] font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">
+                <div className="rounded-xl bg-gradient-to-r from-[#0E1B33] via-[#122244] to-[#0E1B33] p-5 border border-[#DFB76C]/50 shadow-sm">
+                  <span className="text-[11px] font-semibold text-[#DFB76C] uppercase tracking-wider block mb-1">
                     Representative Mandate Highlight
                   </span>
-                  <p className="text-xs text-white italic font-serif">
+                  <p className="text-xs text-white italic font-serif leading-relaxed">
                     "{current.mandates}"
                   </p>
                 </div>
@@ -283,7 +283,7 @@ function ExpertiseContent() {
                 <div className="pt-2">
                   <Link
                     href="/contact"
-                    className="wood-btn-secondary w-full px-6 py-3.5 rounded-xl text-xs font-semibold uppercase tracking-wider text-center block"
+                    className="wood-btn-primary w-full px-6 py-4 rounded-xl text-xs font-semibold uppercase tracking-wider text-center block shadow-lg"
                   >
                     Submit Confidential Briefing
                   </Link>
@@ -304,7 +304,7 @@ function ExpertiseContent() {
 export default function ExpertisePage() {
   return (
     <Suspense fallback={
-      <div className="py-20 text-center text-[#D4AF37] bg-[#0E0906]">
+      <div className="py-20 text-center text-[#DFB76C] bg-[#050811]">
         Loading Practice Areas...
       </div>
     }>

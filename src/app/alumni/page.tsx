@@ -42,28 +42,28 @@ export default function AlumniPage() {
   return (
     <div className="space-y-0">
       {/* Hero Header */}
-      <section className="py-20 bg-[#120B07] border-b border-[#291B13]">
+      <section className="py-20 bg-[#0B1426]/60 backdrop-blur-md border-b border-[#DFB76C]/25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#D4AF37] px-3.5 py-1.5 rounded-full bg-[#1F140D] border border-[#472E1E]">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
             Enduring Legacy
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white">
             Our Alumni Network
           </h1>
-          <p className="text-sm text-[#A39382] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
             Our former advocates and partners shape legal jurisprudence, lead multinational legal departments, preside on judicial benches, and direct sovereign investment funds around the globe.
           </p>
         </div>
       </section>
 
       {/* Alumni Stats */}
-      <section className="py-12 bg-[#0E0906] border-b border-[#291B13]">
+      <section className="py-12 bg-transparent border-b border-[#DFB76C]/25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {alumniStats.map((stat, index) => (
-              <div key={index} className="wood-badge rounded-xl p-6 text-center border border-[#3D291D]">
-                <h3 className="font-serif text-3xl font-extrabold text-[#D4AF37]">{stat.number}</h3>
-                <p className="text-xs text-[#A39382] mt-1 font-medium">{stat.label}</p>
+              <div key={index} className="luxury-card rounded-2xl p-6 text-center">
+                <h3 className="font-serif text-3xl sm:text-4xl font-extrabold gold-text-gradient">{stat.number}</h3>
+                <p className="text-xs text-[#CBD5E1] mt-1 font-semibold">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -71,10 +71,10 @@ export default function AlumniPage() {
       </section>
 
       {/* Alumni Spotlights */}
-      <section className="py-20 bg-[#0E0906]">
+      <section className="py-20 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#D4AF37]">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
               Voices of Distinction
             </span>
             <h2 className="font-serif text-3xl font-bold text-white">
@@ -86,21 +86,21 @@ export default function AlumniPage() {
             {alumniSpotlights.map((alumnus, idx) => (
               <div
                 key={idx}
-                className="wood-badge rounded-2xl p-8 border border-[#3D291D] space-y-4 relative flex flex-col justify-between"
+                className="luxury-card rounded-2xl p-8 space-y-5 relative flex flex-col justify-between border-t-2 border-t-[#DFB76C]/60 hover:border-t-[#F7E7A9]"
               >
-                <div className="space-y-3">
-                  <span className="inline-block text-[11px] font-semibold text-[#D4AF37] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#27190F] border border-[#523A2A]">
+                <div className="space-y-3.5">
+                  <span className="inline-block text-[11px] font-semibold text-[#DFB76C] uppercase tracking-wider px-3 py-1 rounded bg-[#0D1B36] border border-[#DFB76C]/40">
                     {alumnus.sector}
                   </span>
-                  <p className="text-xs italic text-[#E2D5C7] leading-relaxed">
+                  <p className="text-xs sm:text-sm italic text-[#CBD5E1] leading-relaxed font-serif">
                     "{alumnus.quote}"
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#291B13]">
+                <div className="pt-4 border-t border-[#DFB76C]/20">
                   <h4 className="font-serif text-lg font-bold text-white">{alumnus.name}</h4>
-                  <p className="text-xs text-[#D4AF37] font-medium">{alumnus.currentRole}</p>
-                  <p className="text-[11px] text-[#7A6A5C]">{alumnus.formerRole}</p>
+                  <p className="text-xs text-[#DFB76C] font-semibold">{alumnus.currentRole}</p>
+                  <p className="text-[11px] text-[#94A3B8]">{alumnus.formerRole}</p>
                 </div>
               </div>
             ))}

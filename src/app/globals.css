@@ -2,21 +2,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0D0805;
-  --foreground: #F5EBE1;
-  --gold-accent: #D4AF37;
-  --gold-hover: #E5C158;
-  --wood-dark: #19100A;
-  --wood-card: #20150F;
-  --wood-border: #3D291D;
-  --text-muted: #A39382;
+  --background: #050811;
+  --foreground: #F8FAFC;
+  --gold-primary: #DFB76C;
+  --gold-light: #F7E7A9;
+  --gold-dark: #A17627;
+  --navy-deep: #050811;
+  --navy-surface: #0B1426;
+  --navy-card: rgba(11, 20, 39, 0.75);
+  --navy-border: rgba(223, 183, 108, 0.28);
+  --text-muted: #94A3B8;
+  --text-sub: #CBD5E1;
 }
 
 body {
-  background-color: var(--background);
+  background: 
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(223, 183, 108, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 100% 45%, rgba(30, 64, 175, 0.28), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 0% 85%, rgba(223, 183, 108, 0.14), transparent 50%),
+    linear-gradient(180deg, 
+      #040711 0%, 
+      #081022 14%, 
+      #0D1A36 32%, 
+      #112246 50%, 
+      #0D1A36 68%, 
+      #070E1E 86%, 
+      #03060C 100%
+    );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--foreground);
   font-family: 'Plus Jakarta Sans', sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.vintage-sepia-bg {
+  background: 
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(223, 183, 108, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 100% 45%, rgba(30, 64, 175, 0.28), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 0% 85%, rgba(223, 183, 108, 0.14), transparent 50%),
+    linear-gradient(180deg, 
+      #040711 0%, 
+      #081022 14%, 
+      #0D1A36 32%, 
+      #112246 50%, 
+      #0D1A36 68%, 
+      #070E1E 86%, 
+      #03060C 100%
+    );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1, h2, h3, .font-serif-heading {
@@ -27,64 +65,177 @@ h1, h2, h3, .font-serif-heading {
   font-family: 'Cinzel', serif;
 }
 
-/* Custom Wood Texture & Metallic Buttons */
+/* Custom 24K Imperial Gold Primary Button */
 .wood-btn-primary {
-  background: linear-gradient(180deg, #4A3324 0%, #2A1B11 100%);
-  border: 1px solid #6E4D38;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 14px rgba(0, 0, 0, 0.4);
-  color: #F8F1E9;
-  transition: all 0.25s ease;
+  background: linear-gradient(135deg, #DFB76C 0%, #F5DE9C 50%, #C99A45 100%);
+  border: 1px solid #F5DE9C;
+  box-shadow: 0 4px 18px rgba(223, 183, 108, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  color: #050811;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wood-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.7s ease;
+}
+
+.wood-btn-primary:hover::after {
+  left: 140%;
 }
 
 .wood-btn-primary:hover {
-  background: linear-gradient(180deg, #5B402E 0%, #362317 100%);
-  border-color: #D4AF37;
-  color: #FFF;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 6px 20px rgba(212, 175, 55, 0.25);
+  background: linear-gradient(135deg, #E8C885 0%, #FFF2CC 50%, #D8AA55 100%);
+  border-color: #FFF2CC;
+  color: #020408;
+  box-shadow: 0 8px 28px rgba(223, 183, 108, 0.6), 0 0 24px rgba(245, 222, 156, 0.5);
+  transform: translateY(-2px);
 }
 
+/* Royal Midnight Frosted Glass Secondary Button */
 .wood-btn-secondary {
-  background: linear-gradient(180deg, #2D1E14 0%, #1A1009 100%);
-  border: 1px solid #483223;
-  color: #E2D4C5;
+  background: rgba(14, 25, 48, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(223, 183, 108, 0.5);
+  color: #F8FAFC;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
   transition: all 0.25s ease;
 }
 
 .wood-btn-secondary:hover {
-  background: linear-gradient(180deg, #3A281B 0%, #23160D 100%);
-  border-color: #A37E36;
+  background: rgba(22, 38, 72, 0.9);
+  border-color: #DFB76C;
   color: #FFFFFF;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.wood-badge {
-  background: linear-gradient(180deg, rgba(42, 27, 17, 0.85) 0%, rgba(20, 12, 7, 0.95) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  backdrop-filter: blur(12px);
-  box-shadow: inset 0 1px 0 rgba(255, 215, 0, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 20px rgba(223, 183, 108, 0.3);
+  transform: translateY(-2px);
 }
 
 .gold-glow {
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 25px rgba(223, 183, 108, 0.35);
 }
 
 .gold-text-gradient {
-  background: linear-gradient(135deg, #FFF6E5 0%, #D4AF37 50%, #AA8222 100%);
+  background: linear-gradient(135deg, #DFB76C 0%, #FDF3C7 45%, #DFB76C 75%, #B88934 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Custom Scrollbar */
+/* Luxury Frosted Midnight Crystal Card */
+.luxury-card {
+  background: rgba(11, 20, 39, 0.74);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(223, 183, 108, 0.26);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.6), 0 0 18px rgba(223, 183, 108, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #F8FAFC;
+}
+
+.luxury-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(223, 183, 108, 0.75);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(223, 183, 108, 0.25);
+}
+
+/* Archival Museum Frame */
+.archival-frame {
+  position: relative;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(223, 183, 108, 0.15);
+  border: 1.5px solid rgba(223, 183, 108, 0.65);
+}
+
+.archival-frame::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(223, 183, 108, 0.35);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Keyframes */
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(250%); }
+}
+
+.shimmer-active {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(223, 183, 108, 0.3) 50%,
+    transparent 100%
+  );
+  animation: shimmer-sweep 3.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+@keyframes pulse-gold-ring {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(223, 183, 108, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(223, 183, 108, 0);
+  }
+}
+
+.pulse-gold {
+  animation: pulse-gold-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbar in Royal Midnight & Gold */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0E0907;
+  background: #050811;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3A271B;
+  background: #192C54;
   border-radius: 4px;
 }
+::-webkit-scrollbar-thumb:hover {
+  background: #DFB76C;
+}
+
 /* Universal Cursor Pointer for Buttons and Interactive Controls */
 button,
 a,
@@ -106,4 +257,3 @@ a:hover,
 select:hover {
   cursor: pointer !important;
 }
-

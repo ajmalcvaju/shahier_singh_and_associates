@@ -10,30 +10,25 @@ export default function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0D0805] text-white py-12 lg:py-16">
-      {/* Hero Background Image with Balanced Dark Tint */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero_bg.png"
-          alt="Shahier Singh & Associates - Legal Counsel Library"
-          fill
-          priority
-          className="object-cover object-center opacity-40 mix-blend-luminosity scale-105"
-        />
-        {/* Layered Vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0805]/95 via-[#0D0805]/80 to-[#0D0805]/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0805] via-transparent to-[#0D0805]/70" />
+    <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-transparent text-[#2B1A0E] py-12 lg:py-16">
+      {/* Hero Background Image with Vintage Sepia Glow */}
+      {/* Hero Ambient Glow with Midnight Sapphire & Imperial Gold */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-b from-[#1E3A8A]/25 via-[#DFB76C]/12 to-transparent blur-3xl rounded-full" />
       </div>
 
-      {/* Decorative Golden Ambient Accent Line */}
-      <div className="absolute left-0 top-1/4 w-1 h-64 bg-gradient-to-b from-transparent via-[#D4AF37]/50 to-transparent z-10" />
+      {/* Decorative Gold Ambient Accent Line */}
+      <div className="absolute left-0 top-1/4 w-1 h-64 bg-gradient-to-b from-transparent via-[#DFB76C]/50 to-transparent z-10" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Column: Golden Scales & Gavel Image with 70 Years Experience Badge */}
           <div className="lg:col-span-5 relative">
-            <div className="relative h-[380px] sm:h-[480px] w-full rounded-2xl overflow-hidden border border-[#523A2A] shadow-2xl wood-badge group">
+            {/* Ambient Golden Halo Glow behind Artwork */}
+            <div className="absolute -inset-3 bg-gradient-to-tr from-[#1E3A8A]/40 via-[#DFB76C]/30 to-[#DFB76C]/20 rounded-3xl blur-xl -z-10" />
+
+            <div className="relative h-[380px] sm:h-[480px] w-full rounded-2xl overflow-hidden archival-frame bg-[#0B1528] group">
               <Image
                 src="/images/hero_scales.png"
                 alt="Golden Scales of Justice & Legal Books"
@@ -41,29 +36,33 @@ export default function HeroSection() {
                 priority
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0E0906] via-transparent to-transparent opacity-85" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050811]/90 via-[#050811]/25 to-transparent" />
               
-              {/* Floating Highlight Badge: 70+ Years Experience */}
-              <div className="absolute top-4 left-4 p-3 rounded-xl bg-[#20140C]/95 backdrop-blur-md border border-[#D4AF37] shadow-2xl flex items-center gap-3 z-20">
-                <div className="h-10 w-10 rounded-lg bg-[#3A2416] border border-[#6E4D38] flex items-center justify-center text-[#D4AF37]">
+              {/* Floating Highlight Badge: 70+ Years Experience with Golden Glow Ring */}
+              <div className="absolute top-4 left-4 p-3 rounded-xl bg-[#0B1528]/95 backdrop-blur-md border border-[#DFB76C] shadow-2xl flex items-center gap-3 z-20 pulse-gold">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-[#16274B] to-[#0A1324] border border-[#DFB76C]/50 flex items-center justify-center text-[#DFB76C] shadow-inner">
                   <History className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-serif text-lg font-extrabold text-white gold-text-gradient block leading-none">
+                  <span className="font-serif text-lg font-extrabold text-[#FFFFFF] block leading-none">
                     70+ YEARS
                   </span>
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#D4AF37]">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#DFB76C]">
                     Legal & Judicial Lineage
                   </span>
                 </div>
               </div>
 
-              {/* Glassmorphic Badge Overlay at bottom of image */}
-              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#1B110B]/90 backdrop-blur-md border border-[#D4AF37]/40 text-center shadow-2xl z-20">
-                <span className="font-cinzel text-xs font-bold tracking-widest text-[#D4AF37] uppercase block">
-                  EQUITY • INTEGRITY • ADVOCACY
-                </span>
-                <span className="text-[11px] text-[#C8B8A6] block mt-0.5">
+              {/* Badge Overlay at bottom of image */}
+              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#0B1528]/95 backdrop-blur-md border border-[#DFB76C]/60 text-center shadow-2xl z-20">
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <span className="h-[1px] w-6 bg-[#DFB76C]" />
+                  <span className="font-cinzel text-xs font-bold tracking-widest text-[#DFB76C] uppercase block">
+                    EQUITY • INTEGRITY • ADVOCACY
+                  </span>
+                  <span className="h-[1px] w-6 bg-[#DFB76C]" />
+                </div>
+                <span className="text-[11px] text-[#CBD5E1] block mt-0.5">
                   70 Years of High-Stakes Litigation & Full-Service Legal Representation
                 </span>
               </div>
@@ -73,38 +72,38 @@ export default function HeroSection() {
           {/* Right Column: Headline, Subtitle, CTA Buttons & Badges */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Tagline Badge with 70 Years Highlight */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#593E2B] bg-[#1E130B]/90 text-[#D4AF37] text-xs font-semibold uppercase tracking-widest backdrop-blur-md">
-              <Sparkles className="w-3.5 h-3.5" />
+            {/* Tagline Badge with 70 Years Highlight & Subtle Shimmer */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#DFB76C] bg-[#0B1528]/90 text-[#DFB76C] text-xs font-semibold uppercase tracking-widest shadow-xl shimmer-active">
+              <Sparkles className="w-3.5 h-3.5 text-[#DFB76C]" />
               <span>70+ Years of Legal Lineage • High-Stakes Litigation & Full-Service Advocacy</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.18] text-white drop-shadow-md">
+            <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.18] text-[#FFFFFF] drop-shadow-md">
               A LEGACY OF TRUSTED <br className="hidden sm:block" />
               LEGAL ADVOCACY TO <br className="hidden sm:block" />
-              <span className="gold-text-gradient">PROTECT YOUR RIGHTS</span> <br className="hidden sm:block" />
+              <span className="gold-text-gradient font-black">PROTECT YOUR RIGHTS</span> <br className="hidden sm:block" />
               & RESOLVE DISPUTES.
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm sm:text-base text-[#D5C6B7] leading-relaxed max-w-xl font-light">
-              Backed by over <strong className="text-[#D4AF37] font-semibold">70 years of combined judicial and litigation experience</strong>, our advocates represent individuals, families, and business enterprises across trial courts, High Courts, and the Supreme Court with unyielding integrity.
+            <p className="text-sm sm:text-base text-[#CBD5E1] leading-relaxed max-w-xl font-normal">
+              Backed by over <strong className="text-[#DFB76C] font-semibold">70 years of combined judicial and litigation experience</strong>, our advocates represent individuals, families, and business enterprises across trial courts, High Courts, and the Supreme Court with unyielding integrity.
             </p>
 
             {/* Main CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="wood-btn-primary px-7 py-3.5 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm text-center flex items-center justify-center gap-2 group shadow-2xl"
+                className="wood-btn-primary px-7 py-3.5 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm text-center flex items-center justify-center gap-2 group shadow-2xl cursor-pointer"
               >
                 <span>SCHEDULE A STRATEGY CALL</span>
-                <ChevronRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-[#050811] group-hover:translate-x-1.5 transition-transform" />
               </button>
 
               <Link
                 href="/expertise"
-                className="wood-btn-secondary px-7 py-3.5 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm text-center flex items-center justify-center gap-2"
+                className="wood-btn-secondary px-7 py-3.5 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm text-center flex items-center justify-center gap-2 hover:border-[#DFB76C]"
               >
                 <span>EXPLORE PRACTICE AREAS</span>
               </Link>
@@ -112,46 +111,46 @@ export default function HeroSection() {
 
             {/* Credentials / Stat Bar */}
             <div className="pt-4">
-              <div className="wood-badge rounded-2xl p-3 sm:p-4 grid grid-cols-3 gap-2 sm:gap-4 border border-[#523A2A]/60">
+              <div className="rounded-2xl p-3 sm:p-4 grid grid-cols-3 gap-2 sm:gap-4 border border-[#DFB76C]/35 bg-[#0B1528]/85 backdrop-blur-md shadow-2xl">
                 {/* Stat 1 */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#1A100A] sm:bg-transparent border sm:border-0 border-[#3D291D] text-center sm:text-left sm:border-r sm:border-[#3D291D] sm:pr-2">
-                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#11203E]/50 sm:bg-transparent border sm:border-0 border-[#DFB76C]/20 text-center sm:text-left sm:border-r sm:border-[#DFB76C]/25 sm:pr-2">
+                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-gradient-to-br from-[#16274B] to-[#0A1324] border border-[#DFB76C]/40 flex items-center justify-center flex-shrink-0 text-[#DFB76C] shadow-inner">
                     <History className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">70+ Years</span>
-                    <span className="text-[9px] sm:text-[11px] text-[#A39382] block mt-0.5">Judicial Practice</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-[#FFFFFF] block leading-tight">70+ Years</span>
+                    <span className="text-[9px] sm:text-[11px] text-[#94A3B8] block mt-0.5 font-medium">Judicial Practice</span>
                   </div>
                 </div>
 
                 {/* Stat 2 */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#1A100A] sm:bg-transparent border sm:border-0 border-[#3D291D] text-center sm:text-left sm:border-r sm:border-[#3D291D] sm:pr-2">
-                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#11203E]/50 sm:bg-transparent border sm:border-0 border-[#DFB76C]/20 text-center sm:text-left sm:border-r sm:border-[#DFB76C]/25 sm:pr-2">
+                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-gradient-to-br from-[#16274B] to-[#0A1324] border border-[#DFB76C]/40 flex items-center justify-center flex-shrink-0 text-[#DFB76C] shadow-inner">
                     <Gavel className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">1,000+ Disputes</span>
-                    <span className="text-[9px] sm:text-[11px] text-[#A39382] block mt-0.5">Advocated</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-[#FFFFFF] block leading-tight">1,000+ Disputes</span>
+                    <span className="text-[9px] sm:text-[11px] text-[#94A3B8] block mt-0.5 font-medium">Advocated</span>
                   </div>
                 </div>
 
                 {/* Stat 3 */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#1A100A] sm:bg-transparent border sm:border-0 border-[#3D291D] text-center sm:text-left">
-                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-[#2A1C12] border border-[#593E2B] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 p-2 sm:p-0 rounded-xl sm:rounded-none bg-[#11203E]/50 sm:bg-transparent border sm:border-0 border-[#DFB76C]/20 text-center sm:text-left">
+                  <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-gradient-to-br from-[#16274B] to-[#0A1324] border border-[#DFB76C]/40 flex items-center justify-center flex-shrink-0 text-[#DFB76C] shadow-inner">
                     <Award className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] sm:text-xs font-semibold text-white block leading-tight">Supreme & High</span>
-                    <span className="text-[9px] sm:text-[11px] text-[#A39382] block mt-0.5">Court Advocates</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-[#FFFFFF] block leading-tight">Supreme & High</span>
+                    <span className="text-[9px] sm:text-[11px] text-[#94A3B8] block mt-0.5 font-medium">Court Advocates</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Bottom Engraved Wooden Plaque Statement */}
+            {/* Bottom Engraved Plaque Statement */}
             <div className="pt-1">
-              <div className="rounded-xl bg-gradient-to-r from-[#20150F] via-[#332218] to-[#20150F] border border-[#4D3525] p-3 text-center shadow-inner">
-                <span className="font-cinzel text-[11px] font-bold tracking-[0.18em] text-[#E6DACB] uppercase">
+              <div className="rounded-xl bg-gradient-to-r from-[#DFB76C]/20 via-[#DFB76C]/10 to-[#DFB76C]/20 backdrop-blur-md border border-[#DFB76C]/40 p-3 text-center shadow-lg relative overflow-hidden">
+                <span className="font-cinzel text-[11px] font-bold tracking-[0.18em] text-[#F5DE9C] uppercase">
                   70 YEARS OF UNYIELDING LEGAL ADVOCACY TO SAFEGUARD YOUR RIGHTS & INTERESTS
                 </span>
               </div>

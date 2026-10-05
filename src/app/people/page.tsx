@@ -124,57 +124,57 @@ export default function PeoplePage() {
   return (
     <div className="space-y-0">
       {/* Header */}
-      <section className="py-16 bg-[#120B07] border-b border-[#291B13]">
+      <section className="py-20 bg-[#0B1426]/60 backdrop-blur-md border-b border-[#DFB76C]/25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#D4AF37] px-3.5 py-1.5 rounded-full bg-[#1F140D] border border-[#472E1E]">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
             Official Roll of Advocates
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white">
             Our Advocates & Senior Counsel
           </h1>
-          <p className="text-sm text-[#A39382] max-w-2xl mx-auto">
+          <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
             Distinguished trial advocates and legal specialists representing clients in the High Court of Kerala, Supreme Court of India, and commercial tribunals.
           </p>
         </div>
       </section>
 
       {/* People Grid */}
-      <section className="py-16 bg-[#0E0906]">
+      <section className="py-16 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {people.map((person, idx) => (
               <div
                 key={idx}
-                className="group rounded-2xl bg-[#170E09] border border-[#3D291D] hover:border-[#D4AF37] overflow-hidden transition-all duration-300 shadow-xl flex flex-col justify-between"
+                className="group rounded-2xl luxury-card overflow-hidden flex flex-col justify-between border-t-2 border-t-[#DFB76C]/60 hover:border-t-[#F7E7A9]"
               >
                 <div>
-                  <div className="relative h-64 w-full bg-[#170E09] overflow-hidden">
+                  <div className="relative h-64 w-full bg-[#070D1A] overflow-hidden border-b border-[#DFB76C]/20">
                     <Image
                       src={person.image}
                       alt={person.name}
                       fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500 z-0"
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-700 z-0"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#170E09] via-[#170E09]/30 to-transparent pointer-events-none z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1426]/95 via-transparent to-transparent pointer-events-none z-10" />
                   </div>
 
                   <div className="p-6 space-y-3">
-                    <span className="inline-block text-[11px] font-semibold text-[#D4AF37] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#27190F] border border-[#523A2A]">
+                    <span className="inline-block text-[11px] font-semibold text-[#DFB76C] uppercase tracking-wider px-3 py-1 rounded bg-[#0D1B36] border border-[#DFB76C]/40">
                       {person.practice}
                     </span>
-                    <h3 className="font-serif text-2xl font-bold text-white group-hover:text-[#D4AF37] transition-colors">
+                    <h3 className="font-serif text-2xl font-bold text-white group-hover:text-[#DFB76C] transition-colors">
                       {person.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#C8B8A6]">{person.role}</p>
-                    <p className="text-xs text-[#8C7C6D] leading-relaxed pt-1">{person.bio}</p>
+                    <p className="text-xs font-semibold text-[#DFB76C]">{person.role}</p>
+                    <p className="text-xs text-[#CBD5E1] leading-relaxed pt-1">{person.bio}</p>
 
-                    <div className="pt-3 border-t border-[#291B13] space-y-1.5 text-[11px] text-[#A39382]">
+                    <div className="pt-3 border-t border-[#DFB76C]/20 space-y-1.5 text-[11px] text-[#94A3B8]">
                       <div className="flex items-start gap-2">
-                        <BookOpen className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                        <BookOpen className="w-3.5 h-3.5 text-[#DFB76C] flex-shrink-0 mt-0.5" />
                         <span>{person.education}</span>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Scale className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                        <Scale className="w-3.5 h-3.5 text-[#DFB76C] flex-shrink-0 mt-0.5" />
                         <span>{person.admissions}</span>
                       </div>
                     </div>
@@ -184,9 +184,9 @@ export default function PeoplePage() {
                 <div className="p-6 pt-0">
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="w-full wood-btn-secondary py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 hover:border-[#D4AF37] cursor-pointer"
+                    className="w-full wood-btn-secondary py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:border-[#DFB76C] shadow-sm cursor-pointer"
                   >
-                    <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
+                    <Mail className="w-3.5 h-3.5 text-[#DFB76C]" />
                     <span>Contact Counsel</span>
                   </button>
                 </div>
