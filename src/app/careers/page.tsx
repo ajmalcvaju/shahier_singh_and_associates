@@ -88,15 +88,15 @@ ${careerForm.notes || "Career application submitted via portal"}`;
   return (
     <div className="space-y-0">
       {/* Header */}
-      <section className="relative py-20 sepia-hero-bg border-b-2 border-[#C59242]/50 shadow-xl overflow-hidden">
+      <section className="relative py-20 sepia-hero-bg border-b border-[#8C6A3C]/35 shadow-md overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#FCE6B2] px-4 py-1.5 rounded-full bg-[#24130A] border border-[#C59242] shadow-xl shimmer-active inline-block">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#FAF5EB] px-4 py-1.5 rounded-full bg-[#1C120A] border border-[#8C6A3C]/50 shadow-md inline-block">
             Join Our Firm
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-extrabold sepia-headline">
+          <h1 className="font-serif text-4xl sm:text-5xl font-extrabold text-[#140E08]">
             Careers & Judicial Fellowships
           </h1>
-          <p className="text-sm sm:text-base text-[#2D1709] font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#2E2014] font-medium max-w-2xl mx-auto leading-relaxed">
             Shape the future of jurisprudence with a distinguished team of legal scholars, senior trial advocates, and corporate negotiators.
           </p>
         </div>
