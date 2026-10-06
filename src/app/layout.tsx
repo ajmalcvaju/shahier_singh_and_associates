@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased vintage-sepia-bg text-[#E2E8F0] min-h-screen flex flex-col selection:bg-[#DFB76C] selection:text-[#050811]">
+      <body className="antialiased bg-white text-[#1A1A1A] min-h-screen flex flex-col selection:bg-[#C59242] selection:text-white">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

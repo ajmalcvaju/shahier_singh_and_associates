@@ -173,30 +173,30 @@ function ExpertiseContent() {
   const CurrentIcon = current.icon;
 
   return (
-    <div className="space-y-0">
+    <div className="space-y-0 bg-white">
       {/* Header */}
-      <section className="py-20 bg-[#0B1426]/60 backdrop-blur-md border-b border-[#DFB76C]/25">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
+      <section className="relative py-20 sepia-hero-bg border-b-2 border-[#C59242]/50 shadow-xl overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#FCE6B2] px-4 py-1.5 rounded-full bg-[#24130A] border border-[#C59242] shadow-xl shimmer-active inline-block">
             Practice Mastery
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white">
+          <h1 className="font-serif text-4xl sm:text-5xl font-extrabold sepia-headline">
             Our Expertise & Legal Practice Areas
           </h1>
-          <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#2D1709] font-medium max-w-2xl mx-auto leading-relaxed">
             Full-spectrum legal advocacy across 10 core practice verticals, combining 70+ years of judicial lineage with pragmatic commercial solutions.
           </p>
         </div>
       </section>
 
       {/* Main Practice Interactive Layout */}
-      <section className="py-16 bg-transparent">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             
             {/* Practice Tabs (Left Column) */}
             <div className="lg:col-span-5 space-y-2">
-              <span className="text-xs font-bold text-[#DFB76C] uppercase tracking-wider block mb-3 px-2">
+              <span className="text-xs font-bold text-[#8E5F2A] uppercase tracking-wider block mb-3 px-2">
                 Select Practice Vertical (10 Core Areas):
               </span>
               <div className="space-y-2.5 max-h-[700px] overflow-y-auto pr-1">
@@ -210,17 +210,17 @@ function ExpertiseContent() {
                       onClick={() => handleSelectPractice(idx)}
                       className={`w-full p-4 rounded-xl text-left flex items-center justify-between transition-all cursor-pointer ${
                         isSelected
-                          ? "bg-[#0E1B33] border-2 border-[#DFB76C] text-white shadow-xl ring-2 ring-[#DFB76C]/30 scale-[1.01]"
-                          : "luxury-card text-[#CBD5E1] hover:text-white hover:border-[#DFB76C]/60"
+                          ? "bg-white border-2 border-[#C59242] text-[#1A1A1A] shadow-xl ring-2 ring-[#C59242]/20 scale-[1.01]"
+                          : "luxury-card bg-white text-[#4A3B32] hover:text-[#1A1A1A] hover:border-[#C59242]/60"
                       }`}
                     >
                       <div className="flex items-center gap-3.5">
-                        <div className={`p-2.5 rounded-xl transition-colors ${isSelected ? "bg-gradient-to-br from-[#DFB76C] to-[#A17627] text-[#050811] shadow-md" : "bg-[#0E1F42] text-[#DFB76C] border border-[#DFB76C]/30"}`}>
+                        <div className={`p-2.5 rounded-xl transition-colors ${isSelected ? "bg-gradient-to-br from-[#C59242] to-[#8E5F2A] text-white shadow-md" : "bg-[#FAF6F0] text-[#8E5F2A] border border-[#E8DFD0]"}`}>
                           <Icon className="w-4 h-4" />
                         </div>
                         <span className="font-serif text-xs sm:text-sm font-bold leading-tight">{p.title}</span>
                       </div>
-                      <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-transform ${isSelected ? "text-[#DFB76C] translate-x-1" : "text-[#64748B]"}`} />
+                      <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-transform ${isSelected ? "text-[#8E5F2A] translate-x-1" : "text-[#A39382]"}`} />
                     </button>
                   );
                 })}
@@ -229,24 +229,24 @@ function ExpertiseContent() {
 
             {/* Selected Practice Detail View (Right Column) */}
             <div id="detail-panel" className="lg:col-span-7">
-              <div className="rounded-2xl p-8 bg-[#0B1426]/90 backdrop-blur-md border border-[#DFB76C]/40 shadow-2xl space-y-6 sticky top-24">
+              <div className="rounded-2xl p-8 bg-white border-2 border-[#C59242]/60 shadow-xl space-y-6 sticky top-24">
                 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pb-6 border-b border-[#DFB76C]/20">
-                  <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-[#0E1F42] to-[#0A152C] border border-[#DFB76C]/50 flex items-center justify-center text-[#DFB76C] flex-shrink-0 shadow-inner">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pb-6 border-b border-[#E8DFD0]">
+                  <div className="h-16 w-16 rounded-2xl bg-[#FAF6F0] border border-[#C59242]/40 flex items-center justify-center text-[#8E5F2A] flex-shrink-0 shadow-inner">
                     <CurrentIcon className="w-8 h-8" />
                   </div>
                   <div>
-                    <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+                    <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1A1A1A]">
                       {current.title}
                     </h2>
-                    <p className="text-xs text-[#DFB76C] font-semibold mt-1 leading-relaxed">
+                    <p className="text-xs text-[#8E5F2A] font-semibold mt-1 leading-relaxed">
                       {current.tagline}
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-serif text-xs font-bold uppercase tracking-wider text-[#DFB76C]">
+                  <h4 className="font-serif text-xs font-bold uppercase tracking-wider text-[#8E5F2A]">
                     Key Capabilities & Advisory Scope
                   </h4>
                   <div className="grid grid-cols-1 gap-3">
@@ -254,15 +254,15 @@ function ExpertiseContent() {
                       const title = typeof item === "string" ? null : item.title;
                       const text = typeof item === "string" ? item : item.text;
                       return (
-                        <div key={i} className="flex items-start gap-3 rounded-xl bg-[#060C1A]/80 p-4 border border-[#DFB76C]/20 shadow-sm hover:border-[#DFB76C]/60 transition-colors">
-                          <CheckCircle2 className="w-4 h-4 text-[#DFB76C] flex-shrink-0 mt-0.5" />
+                        <div key={i} className="flex items-start gap-3 rounded-xl bg-[#FAF8F5] p-4 border border-[#E8DFD0] shadow-sm hover:border-[#C59242]/60 transition-colors">
+                          <CheckCircle2 className="w-4 h-4 text-[#8E5F2A] flex-shrink-0 mt-0.5" />
                           <div className="space-y-1">
                             {title && (
-                              <h5 className="text-xs font-bold text-[#DFB76C] uppercase tracking-wide">
+                              <h5 className="text-xs font-bold text-[#8E5F2A] uppercase tracking-wide">
                                 {title}
                               </h5>
                             )}
-                            <p className="text-xs text-[#CBD5E1] leading-relaxed">{text}</p>
+                            <p className="text-xs text-[#4A3B32] leading-relaxed">{text}</p>
                           </div>
                         </div>
                       );
@@ -271,11 +271,11 @@ function ExpertiseContent() {
                 </div>
 
                 {/* Mandate Highlight Card */}
-                <div className="rounded-xl bg-gradient-to-r from-[#0E1B33] via-[#122244] to-[#0E1B33] p-5 border border-[#DFB76C]/50 shadow-sm">
-                  <span className="text-[11px] font-semibold text-[#DFB76C] uppercase tracking-wider block mb-1">
+                <div className="rounded-xl bg-[#FAF6F0] p-5 border border-[#C59242]/50 shadow-sm">
+                  <span className="text-[11px] font-semibold text-[#8E5F2A] uppercase tracking-wider block mb-1">
                     Representative Mandate Highlight
                   </span>
-                  <p className="text-xs text-white italic font-serif leading-relaxed">
+                  <p className="text-xs text-[#1A1A1A] italic font-serif leading-relaxed">
                     "{current.mandates}"
                   </p>
                 </div>
@@ -304,7 +304,7 @@ function ExpertiseContent() {
 export default function ExpertisePage() {
   return (
     <Suspense fallback={
-      <div className="py-20 text-center text-[#DFB76C] bg-[#050811]">
+      <div className="py-20 text-center text-[#8E5F2A] bg-white">
         Loading Practice Areas...
       </div>
     }>

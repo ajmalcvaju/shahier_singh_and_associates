@@ -42,28 +42,28 @@ export default function AlumniPage() {
   return (
     <div className="space-y-0">
       {/* Hero Header */}
-      <section className="py-20 bg-[#0B1426]/60 backdrop-blur-md border-b border-[#DFB76C]/25">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
+      <section className="relative py-20 sepia-hero-bg border-b-2 border-[#C59242]/50 shadow-xl overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#FCE6B2] px-4 py-1.5 rounded-full bg-[#24130A] border border-[#C59242] shadow-xl shimmer-active inline-block">
             Enduring Legacy
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white">
+          <h1 className="font-serif text-4xl sm:text-5xl font-extrabold sepia-headline">
             Our Alumni Network
           </h1>
-          <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#2D1709] font-medium max-w-2xl mx-auto leading-relaxed">
             Our former advocates and partners shape legal jurisprudence, lead multinational legal departments, preside on judicial benches, and direct sovereign investment funds around the globe.
           </p>
         </div>
       </section>
 
       {/* Alumni Stats */}
-      <section className="py-12 bg-transparent border-b border-[#DFB76C]/25">
+      <section className="py-12 bg-white border-b border-[#E8DFD0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {alumniStats.map((stat, index) => (
-              <div key={index} className="luxury-card rounded-2xl p-6 text-center">
+              <div key={index} className="bg-white border-2 border-[#C59242]/60 hover:border-[#C59242] shadow-sm hover:shadow-md rounded-2xl p-6 text-center transition-all">
                 <h3 className="font-serif text-3xl sm:text-4xl font-extrabold gold-text-gradient">{stat.number}</h3>
-                <p className="text-xs text-[#CBD5E1] mt-1 font-semibold">{stat.label}</p>
+                <p className="text-xs text-[#4A3B32] mt-1 font-semibold">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -71,13 +71,13 @@ export default function AlumniPage() {
       </section>
 
       {/* Alumni Spotlights */}
-      <section className="py-20 bg-transparent">
+      <section className="py-20 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#8E5F2A] px-4 py-1.5 rounded-full bg-white border border-[#C59242]/50 shadow-sm shimmer-active">
               Voices of Distinction
             </span>
-            <h2 className="font-serif text-3xl font-bold text-white">
+            <h2 className="font-serif text-3xl font-bold text-[#1A1A1A]">
               Alumni Hall of Distinction
             </h2>
           </div>
@@ -86,21 +86,21 @@ export default function AlumniPage() {
             {alumniSpotlights.map((alumnus, idx) => (
               <div
                 key={idx}
-                className="luxury-card rounded-2xl p-8 space-y-5 relative flex flex-col justify-between border-t-2 border-t-[#DFB76C]/60 hover:border-t-[#F7E7A9]"
+                className="bg-white rounded-2xl p-8 space-y-5 relative flex flex-col justify-between border-2 border-[#C59242]/60 hover:border-[#C59242] shadow-[0_4px_16px_rgba(42,22,12,0.06)] hover:shadow-[0_16px_36px_rgba(197,146,66,0.20)] transition-all duration-300 hover:-translate-y-1.5"
               >
                 <div className="space-y-3.5">
-                  <span className="inline-block text-[11px] font-semibold text-[#DFB76C] uppercase tracking-wider px-3 py-1 rounded bg-[#0D1B36] border border-[#DFB76C]/40">
+                  <span className="inline-block text-[11px] font-semibold text-[#8E5F2A] uppercase tracking-wider px-3 py-1 rounded bg-[#FAF6F0] border border-[#C59242]/30">
                     {alumnus.sector}
                   </span>
-                  <p className="text-xs sm:text-sm italic text-[#CBD5E1] leading-relaxed font-serif">
-                    "{alumnus.quote}"
+                  <p className="text-xs sm:text-sm italic text-[#4A3B32] leading-relaxed font-serif">
+                    &ldquo;{alumnus.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#DFB76C]/20">
-                  <h4 className="font-serif text-lg font-bold text-white">{alumnus.name}</h4>
-                  <p className="text-xs text-[#DFB76C] font-semibold">{alumnus.currentRole}</p>
-                  <p className="text-[11px] text-[#94A3B8]">{alumnus.formerRole}</p>
+                <div className="pt-4 border-t border-[#E8DFD0]">
+                  <h4 className="font-serif text-lg font-bold text-[#1A1A1A]">{alumnus.name}</h4>
+                  <p className="text-xs text-[#8E5F2A] font-semibold">{alumnus.currentRole}</p>
+                  <p className="text-[11px] text-[#5C4D44]">{alumnus.formerRole}</p>
                 </div>
               </div>
             ))}

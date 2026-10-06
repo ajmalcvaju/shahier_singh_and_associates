@@ -124,57 +124,57 @@ export default function PeoplePage() {
   return (
     <div className="space-y-0">
       {/* Header */}
-      <section className="py-20 bg-[#0B1426]/60 backdrop-blur-md border-b border-[#DFB76C]/25">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#DFB76C] px-4 py-1.5 rounded-full bg-[#0D1B36]/80 border border-[#DFB76C]/50 shadow-md shimmer-active">
+      <section className="relative py-20 sepia-hero-bg border-b-2 border-[#C59242]/50 shadow-xl overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#FCE6B2] px-4 py-1.5 rounded-full bg-[#24130A] border border-[#C59242] shadow-xl shimmer-active inline-block">
             Official Roll of Advocates
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white">
+          <h1 className="font-serif text-4xl sm:text-5xl font-extrabold sepia-headline">
             Our Advocates & Senior Counsel
           </h1>
-          <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#2D1709] font-medium max-w-2xl mx-auto leading-relaxed">
             Distinguished trial advocates and legal specialists representing clients in the High Court of Kerala, Supreme Court of India, and commercial tribunals.
           </p>
         </div>
       </section>
 
       {/* People Grid */}
-      <section className="py-16 bg-transparent">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {people.map((person, idx) => (
               <div
                 key={idx}
-                className="group rounded-2xl luxury-card overflow-hidden flex flex-col justify-between border-t-2 border-t-[#DFB76C]/60 hover:border-t-[#F7E7A9]"
+                className="group rounded-2xl bg-white overflow-hidden flex flex-col justify-between border-2 border-[#C59242]/60 hover:border-[#C59242] shadow-[0_4px_16px_rgba(42,22,12,0.06)] hover:shadow-[0_16px_36px_rgba(197,146,66,0.20)] transition-all duration-300 hover:-translate-y-1.5"
               >
                 <div>
-                  <div className="relative h-64 w-full bg-[#070D1A] overflow-hidden border-b border-[#DFB76C]/20">
+                  <div className="relative h-64 w-full bg-[#FAF6F0] overflow-hidden border-b border-[#E8DFD0]">
                     <Image
                       src={person.image}
                       alt={person.name}
                       fill
                       className="object-cover object-top group-hover:scale-105 transition-transform duration-700 z-0"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1426]/95 via-transparent to-transparent pointer-events-none z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent pointer-events-none z-10" />
                   </div>
 
                   <div className="p-6 space-y-3">
-                    <span className="inline-block text-[11px] font-semibold text-[#DFB76C] uppercase tracking-wider px-3 py-1 rounded bg-[#0D1B36] border border-[#DFB76C]/40">
+                    <span className="inline-block text-[11px] font-semibold text-[#8E5F2A] uppercase tracking-wider px-3 py-1 rounded bg-[#FAF6F0] border border-[#C59242]/30">
                       {person.practice}
                     </span>
-                    <h3 className="font-serif text-2xl font-bold text-white group-hover:text-[#DFB76C] transition-colors">
+                    <h3 className="font-serif text-2xl font-bold text-[#1A1A1A] group-hover:text-[#8E5F2A] transition-colors">
                       {person.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#DFB76C]">{person.role}</p>
-                    <p className="text-xs text-[#CBD5E1] leading-relaxed pt-1">{person.bio}</p>
+                    <p className="text-xs font-semibold text-[#8E5F2A]">{person.role}</p>
+                    <p className="text-xs text-[#4A3B32] leading-relaxed pt-1">{person.bio}</p>
 
-                    <div className="pt-3 border-t border-[#DFB76C]/20 space-y-1.5 text-[11px] text-[#94A3B8]">
+                    <div className="pt-3 border-t border-[#E8DFD0] space-y-1.5 text-[11px] text-[#5C4D44]">
                       <div className="flex items-start gap-2">
-                        <BookOpen className="w-3.5 h-3.5 text-[#DFB76C] flex-shrink-0 mt-0.5" />
+                        <BookOpen className="w-3.5 h-3.5 text-[#C59242] flex-shrink-0 mt-0.5" />
                         <span>{person.education}</span>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Scale className="w-3.5 h-3.5 text-[#DFB76C] flex-shrink-0 mt-0.5" />
+                        <Scale className="w-3.5 h-3.5 text-[#C59242] flex-shrink-0 mt-0.5" />
                         <span>{person.admissions}</span>
                       </div>
                     </div>
@@ -184,9 +184,9 @@ export default function PeoplePage() {
                 <div className="p-6 pt-0">
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="w-full wood-btn-secondary py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:border-[#DFB76C] shadow-sm cursor-pointer"
+                    className="w-full wood-btn-secondary py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:border-[#C59242] shadow-sm cursor-pointer"
                   >
-                    <Mail className="w-3.5 h-3.5 text-[#DFB76C]" />
+                    <Mail className="w-3.5 h-3.5 text-[#C59242]" />
                     <span>Contact Counsel</span>
                   </button>
                 </div>

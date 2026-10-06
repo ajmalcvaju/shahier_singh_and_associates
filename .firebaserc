@@ -1,5 +1,6 @@
 {
   "projects": {
+    "default": "shahier-singh-and-associates",
     "production": "shahier-singh-and-associates"
   },
   "targets": {},

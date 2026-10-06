@@ -2,59 +2,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050811;
-  --foreground: #F8FAFC;
-  --gold-primary: #DFB76C;
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  --gold-primary: #C59242;
   --gold-light: #F7E7A9;
-  --gold-dark: #A17627;
-  --navy-deep: #050811;
-  --navy-surface: #0B1426;
-  --navy-card: rgba(11, 20, 39, 0.75);
-  --navy-border: rgba(223, 183, 108, 0.28);
-  --text-muted: #94A3B8;
-  --text-sub: #CBD5E1;
+  --gold-dark: #8E5F2A;
+  --sepia-deep: #160C06;
+  --sepia-mid: #2A160C;
+  --sepia-warm: #3B2012;
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A3B32;
+  --text-muted: #6B5B52;
 }
 
 body {
-  background: 
-    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(223, 183, 108, 0.18), transparent 60%),
-    radial-gradient(ellipse 70% 50% at 100% 45%, rgba(30, 64, 175, 0.28), transparent 50%),
-    radial-gradient(ellipse 70% 50% at 0% 85%, rgba(223, 183, 108, 0.14), transparent 50%),
-    linear-gradient(180deg, 
-      #040711 0%, 
-      #081022 14%, 
-      #0D1A36 32%, 
-      #112246 50%, 
-      #0D1A36 68%, 
-      #070E1E 86%, 
-      #03060C 100%
-    );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: var(--foreground);
+  background: #FFFFFF;
+  color: #1A1A1A;
   font-family: 'Plus Jakarta Sans', sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
 }
 
-.vintage-sepia-bg {
+/* Vintage Legacy Sepia Tone Hero Gradient (Sampled directly from authentic sepia reference) */
+.sepia-hero-bg {
   background: 
-    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(223, 183, 108, 0.18), transparent 60%),
-    radial-gradient(ellipse 70% 50% at 100% 45%, rgba(30, 64, 175, 0.28), transparent 50%),
-    radial-gradient(ellipse 70% 50% at 0% 85%, rgba(223, 183, 108, 0.14), transparent 50%),
+    radial-gradient(ellipse 90% 60% at 50% 32%, rgba(255, 254, 203, 0.65) 0%, rgba(223, 196, 140, 0.30) 45%, transparent 75%),
+    radial-gradient(ellipse 75% 35% at 50% 88%, rgba(252, 216, 154, 0.30) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, transparent 55%, rgba(26, 13, 4, 0.50) 100%),
     linear-gradient(180deg, 
-      #040711 0%, 
-      #081022 14%, 
-      #0D1A36 32%, 
-      #112246 50%, 
-      #0D1A36 68%, 
-      #070E1E 86%, 
-      #03060C 100%
+      #8F6838 0%, 
+      #C9A066 12%, 
+      #DFC48C 25%, 
+      #FFFECB 36%, 
+      #CAA66F 48%, 
+      #916E3E 62%, 
+      #5B3A1B 78%, 
+      #765534 88%, 
+      #241407 100%
     );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+}
+
+.sepia-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 40%, rgba(18, 9, 3, 0.35) 100%);
+  pointer-events: none;
+}
+
+.sepia-headline {
+  color: #190C03;
+  text-shadow: 0 1px 2px rgba(255, 254, 203, 0.5);
+}
+
+.sepia-gold-text {
+  color: #5C2200;
+  font-weight: 900;
+  text-shadow: 0 1px 2px rgba(255, 254, 203, 0.8);
+  display: inline-block;
 }
 
 h1, h2, h3, .font-serif-heading {
@@ -67,10 +73,10 @@ h1, h2, h3, .font-serif-heading {
 
 /* Custom 24K Imperial Gold Primary Button */
 .wood-btn-primary {
-  background: linear-gradient(135deg, #DFB76C 0%, #F5DE9C 50%, #C99A45 100%);
+  background: linear-gradient(135deg, #C59242 0%, #F5DE9C 50%, #B37D28 100%);
   border: 1px solid #F5DE9C;
-  box-shadow: 0 4px 18px rgba(223, 183, 108, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  color: #050811;
+  box-shadow: 0 4px 18px rgba(197, 146, 66, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  color: #1A0E07;
   font-weight: 700;
   position: relative;
   overflow: hidden;
@@ -99,66 +105,83 @@ h1, h2, h3, .font-serif-heading {
 }
 
 .wood-btn-primary:hover {
-  background: linear-gradient(135deg, #E8C885 0%, #FFF2CC 50%, #D8AA55 100%);
+  background: linear-gradient(135deg, #D4A359 0%, #FFF2CC 50%, #C58E33 100%);
   border-color: #FFF2CC;
-  color: #020408;
-  box-shadow: 0 8px 28px rgba(223, 183, 108, 0.6), 0 0 24px rgba(245, 222, 156, 0.5);
+  color: #0E0703;
+  box-shadow: 0 8px 28px rgba(197, 146, 66, 0.55), 0 0 20px rgba(245, 222, 156, 0.45);
   transform: translateY(-2px);
 }
 
-/* Royal Midnight Frosted Glass Secondary Button */
+/* Secondary Button: Elegant Warm Glass */
 .wood-btn-secondary {
-  background: rgba(14, 25, 48, 0.75);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(223, 183, 108, 0.5);
-  color: #F8FAFC;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(197, 146, 66, 0.55);
+  color: #2B1A0E;
+  box-shadow: 0 4px 14px rgba(42, 22, 12, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.25s ease;
 }
 
 .wood-btn-secondary:hover {
-  background: rgba(22, 38, 72, 0.9);
-  border-color: #DFB76C;
+  background: #FFFFFF;
+  border-color: #C59242;
+  color: #1A0E07;
+  box-shadow: 0 6px 20px rgba(197, 146, 66, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Hero specific secondary button */
+.hero-btn-secondary {
+  background: rgba(36, 19, 10, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid #C59242;
+  color: #FCE6B2;
+  box-shadow: 0 8px 24px rgba(26, 13, 4, 0.4);
+  transition: all 0.25s ease;
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(53, 27, 10, 1);
+  border-color: #F5DE9C;
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(223, 183, 108, 0.3);
+  box-shadow: 0 12px 28px rgba(197, 146, 66, 0.35);
   transform: translateY(-2px);
 }
 
 .gold-glow {
-  box-shadow: 0 0 25px rgba(223, 183, 108, 0.35);
+  box-shadow: 0 0 25px rgba(197, 146, 66, 0.35);
 }
 
 .gold-text-gradient {
-  background: linear-gradient(135deg, #DFB76C 0%, #FDF3C7 45%, #DFB76C 75%, #B88934 100%);
+  background: linear-gradient(135deg, #C59242 0%, #F5DE9C 45%, #C59242 75%, #8E5F2A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Luxury Frosted Midnight Crystal Card */
+/* Luxury Card on Clean White Canvas */
 .luxury-card {
-  background: rgba(11, 20, 39, 0.74);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(223, 183, 108, 0.26);
-  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.6), 0 0 18px rgba(223, 183, 108, 0.08);
+  background: #FFFFFF;
+  border: 1.5px solid rgba(197, 146, 66, 0.5);
+  box-shadow: 0 6px 20px -2px rgba(42, 22, 12, 0.08), 0 2px 8px rgba(197, 146, 66, 0.08);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  color: #F8FAFC;
+  color: #1A1A1A;
 }
 
 .luxury-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(223, 183, 108, 0.75);
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(223, 183, 108, 0.25);
+  transform: translateY(-4px);
+  border-color: #C59242;
+  box-shadow: 0 18px 38px -4px rgba(197, 146, 66, 0.25), 0 6px 14px rgba(42, 22, 12, 0.08);
 }
 
 /* Archival Museum Frame */
 .archival-frame {
   position: relative;
-  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(223, 183, 108, 0.15);
-  border: 1.5px solid rgba(223, 183, 108, 0.65);
+  box-shadow: 0 16px 40px -8px rgba(42, 22, 12, 0.18), 0 0 20px rgba(197, 146, 66, 0.15);
+  border: 2px solid rgba(197, 146, 66, 0.6);
 }
 
 .archival-frame::before {
