@@ -50,59 +50,60 @@ h1, h2, h3, .font-serif-heading {
   font-family: 'Cinzel', serif;
 }
 
-/* Custom 24K Imperial Gold Primary Button */
-/* Clean, Prestigious Classic Buttons (Tailored for parchment sepia canvas without over-coloring) */
+/* Premium Executive Primary Button (Deep Midnight Navy with Warm Gold Trim) */
 .wood-btn-primary {
-  background: #1C120A;
-  border: 1px solid #3A2617;
-  box-shadow: 0 4px 14px rgba(28, 18, 10, 0.25);
-  color: #FFFFFF;
+  background: #0B192C;
+  border: 1.5px solid #C59242;
+  box-shadow: 0 4px 18px rgba(11, 25, 44, 0.4), inset 0 1px 0 rgba(245, 222, 156, 0.25);
+  color: #FFFDF8;
   font-weight: 700;
   position: relative;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .wood-btn-primary:hover {
-  background: #2E1D10;
-  border-color: #5C381E;
+  background: #142842;
+  border-color: #E2B872;
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(28, 18, 10, 0.35);
-  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(11, 25, 44, 0.5), 0 0 16px rgba(197, 146, 66, 0.3);
+  transform: translateY(-1.5px);
 }
 
-/* Secondary Button: Clean Crisp White with Subtle Framing */
+/* Secondary Button: Clean Crisp Ivory with Refined Gold Framing */
 .wood-btn-secondary {
   background: #FFFFFF;
-  border: 1px solid #D5C2A5;
-  color: #24160C;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1.5px solid #C59242;
+  color: #0A192F;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   position: relative;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .wood-btn-secondary:hover {
-  background: #FAF7F2;
-  border-color: #8C6A3C;
-  color: #1A0E07;
-  box-shadow: 0 4px 12px rgba(42, 22, 12, 0.12);
-  transform: translateY(-1px);
+  background: #FAF7F0;
+  border-color: #9E6B28;
+  color: #061120;
+  box-shadow: 0 6px 18px rgba(197, 146, 66, 0.2);
+  transform: translateY(-1.5px);
 }
 
-/* Hero specific secondary button: Clean, highly legible, non-over-colored */
+/* Hero specific secondary button: Premium White Glass with Navy Framing */
 .hero-btn-secondary {
-  background: #FFFFFF;
-  border: 1.5px solid #2B1D12;
-  color: #1F150D;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid #0B192C;
+  color: #0B192C;
+  box-shadow: 0 4px 16px rgba(11, 25, 44, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-btn-secondary:hover {
-  background: #F8F5EE;
-  border-color: #1A0E07;
-  color: #0E0703;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  transform: translateY(-1px);
+  background: #0B192C;
+  border-color: #0B192C;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(11, 25, 44, 0.35);
+  transform: translateY(-1.5px);
 }
 
 .gold-glow {

@@ -56,15 +56,17 @@ export default function AboutPage() {
   return (
     <div className="space-y-0 bg-white">
       {/* Header Banner */}
-      <section className="relative py-20 sepia-hero-bg border-b border-[#8C6A3C]/35 shadow-md overflow-hidden">
+      <section className="relative py-20 sepia-hero-bg border-b-2 border-[#C59242]/40 shadow-lg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#FAF5EB] px-4 py-1.5 rounded-full bg-[#1C120A] border border-[#8C6A3C]/50 shadow-md inline-block">
-            70+ Years Family Lineage
+          <span className="text-xs font-bold uppercase tracking-widest text-[#FFFDF8] px-4.5 py-1.5 rounded-full bg-[#0B192C] border border-[#C59242] shadow-md shimmer-active inline-block">
+            <span className="bg-gradient-to-r from-[#FFFDF8] via-[#F5DE9C] to-[#FFFDF8] bg-clip-text text-transparent">
+              70+ Years Family Lineage
+            </span>
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-extrabold text-[#140E08]">
+          <h1 className="font-serif text-4xl sm:text-5xl font-extrabold text-[#0A192F] tracking-tight">
             About Shahier Singh & Associates
           </h1>
-          <p className="text-sm sm:text-base text-[#2E2014] font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#1E3A5F] font-medium max-w-2xl mx-auto leading-relaxed">
             Built upon three generations of courtroom mastery and legal scholarship, we provide authoritative legal counsel protecting client interests worldwide.
           </p>
         </div>
